@@ -30,6 +30,15 @@ npx expo start
 mv App.js App.tsx
 ```
 
+### Setup Storybook and Addon for Web
+
+```
+npx sb init --type react
+npm install -D @storybook/addon-react-native-web
+```
+
+// Add addon to .storybook/main.ts
+
 ### Setup yarn
 
 TODO
@@ -38,4 +47,10 @@ TODO
 
 ```
 npx expo start
+```
+
+## Run storybook
+
+```
+npm run storybook
 ```
