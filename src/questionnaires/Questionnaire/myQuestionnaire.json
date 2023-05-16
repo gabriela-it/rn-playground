@@ -1,0 +1,180 @@
+{
+  "nodes": {
+    "start0": {
+      "id": "start0",
+      "position": {
+        "top": 76,
+        "left": 358
+      },
+      "type": "start"
+    },
+    "text3": {
+      "helpTextId": null,
+      "id": "text3",
+      "text": "Some text in the node text.<div><br></div><div>It can be <b>formatted</b>!</div><div>Text can be a bit <font size=\"7\">big</font> or <font size=\"1\">small</font>.</div>",
+      "position": {
+        "top": 505,
+        "left": 142
+      },
+      "type": "text",
+      "headline": "Some Text Node headline",
+      "helpTexts": [
+        {
+          "name": "Help text",
+          "id": 1
+        },
+        {
+          "name": "Image Help",
+          "id": 2
+        },
+        {
+          "name": "link to www",
+          "id": 3
+        },
+        {
+          "name": "Some help text name",
+          "id": 4
+        }
+      ]
+    },
+    "input4": {
+      "question": "Some Input Node question",
+      "helpTextId": null,
+      "dataType": "STRING",
+      "shortText": "Some Input Node short description only shown to clinician",
+      "id": "input4",
+      "position": {
+        "top": 445,
+        "left": 544
+      },
+      "type": "input",
+      "helpTexts": [
+        {
+          "name": "Help text",
+          "id": 1
+        },
+        {
+          "name": "Image Help",
+          "id": 2
+        },
+        {
+          "name": "link to www",
+          "id": 3
+        },
+        {
+          "name": "Some help text name",
+          "id": 4
+        }
+      ]
+    },
+    "end1": {
+      "id": "end1",
+      "position": {
+        "top": 830,
+        "left": 385
+      },
+      "type": "end"
+    },
+    "measurement2": {
+      "ecgSampleTime": null,
+      "branchOnThresholds": true,
+      "femomDuration": null,
+      "helpTextId": null,
+      "measurementForm": "manual",
+      "allowComment": true,
+      "type": "measurement",
+      "helpTexts": [
+        {
+          "name": "Help text",
+          "id": 1
+        },
+        {
+          "name": "Image Help",
+          "id": 2
+        },
+        {
+          "name": "link to www",
+          "id": 3
+        }
+      ],
+      "shortText": "Measurement short description that gets shown to clinician",
+      "measurementType": "TEMPERATURE",
+      "id": "measurement2",
+      "position": {
+        "top": 259,
+        "left": 339
+      },
+      "headline": "Measurement headline that gets shown to patient"
+    }
+  },
+  "connections": [
+    {
+      "source": "start0",
+      "target": "measurement2",
+      "severity": "",
+      "frozen": true,
+      "type": "normal"
+    },
+    {
+      "source": "measurement2",
+      "target": "text3",
+      "severity": "RED",
+      "threshold": "RED_HIGH",
+      "frozen": true,
+      "type": "measurement"
+    },
+    {
+      "source": "measurement2",
+      "target": "input4",
+      "severity": "",
+      "threshold": "NORMAL",
+      "frozen": true,
+      "type": "measurement"
+    },
+    {
+      "source": "measurement2",
+      "target": "text3",
+      "severity": "YELLOW",
+      "threshold": "YELLOW_HIGH",
+      "frozen": true,
+      "type": "measurement"
+    },
+    {
+      "source": "measurement2",
+      "target": "input4",
+      "severity": "YELLOW",
+      "threshold": "YELLOW_LOW",
+      "frozen": true,
+      "type": "measurement"
+    },
+    {
+      "source": "measurement2",
+      "target": "input4",
+      "severity": "RED",
+      "threshold": "RED_LOW",
+      "frozen": true,
+      "type": "measurement"
+    },
+    {
+      "source": "measurement2",
+      "target": "end1",
+      "severity": "",
+      "measurementSkipped": "true",
+      "type": "measurementSkipped"
+    },
+    {
+      "source": "text3",
+      "target": "end1",
+      "severity": "",
+      "frozen": true,
+      "type": "normal"
+    },
+    {
+      "source": "input4",
+      "target": "end1",
+      "severity": "",
+      "frozen": true,
+      "type": "normal"
+    }
+  ]
+}
