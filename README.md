@@ -39,6 +39,14 @@ npm install -D @storybook/addon-react-native-web
 
 // Add addon to .storybook/main.ts
 
+### Setup Accessibility addon
+
+```
+npm install @storybook/addon-a11y --save-dev
+```
+
+// Add addon to .storybook/main.ts
+
 ### Setup yarn
 
 TODO
