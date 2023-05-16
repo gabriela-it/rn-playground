@@ -8,7 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@expo/webpack-config": "^18.0.1",
@@ -24,14 +25,18 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@storybook/addon-a11y": "^7.0.12",
+    "@storybook/addon-coverage": "^0.0.8",
     "@storybook/addon-essentials": "^7.0.11",
     "@storybook/addon-interactions": "^7.0.11",
     "@storybook/addon-links": "^7.0.11",
     "@storybook/addon-react-native-web": "^0.0.20",
     "@storybook/blocks": "^7.0.11",
+    "@storybook/jest": "^0.1.0",
     "@storybook/react": "^7.0.11",
     "@storybook/react-webpack5": "^7.0.11",
+    "@storybook/test-runner": "^0.10.0",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "axe-playwright": "^1.2.3",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.11"
   },

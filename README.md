@@ -39,13 +39,29 @@ npm install -D @storybook/addon-react-native-web
 
 // Add addon to .storybook/main.ts
 
-### Setup Accessibility addon
+### Setup Storybook Accessibility addon
 
 ```
 npm install @storybook/addon-a11y --save-dev
 ```
 
 // Add addon to .storybook/main.ts
+
+### Setup Storybook component testing
+
+```
+npm install @storybook/test-runner --save-dev
+
+// Add `test-storybook` script to `package.json`
+
+npm install @storybook/jest --save-dev
+
+npm install axe-playwright --save-dev
+
+npm install @storybook/addon-coverage --save-dev
+
+// Add addon to .storybook/main.ts
+```
 
 ### Setup yarn
 
@@ -60,5 +76,5 @@ npx expo start
 ## Run storybook
 
 ```
-npm run storybook
+npm run test-storybook -- --coverage
 ```
