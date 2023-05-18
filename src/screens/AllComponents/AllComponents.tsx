@@ -1,19 +1,10 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import {
-  Alert,
-  Button,
-  Image,
-  ScrollView,
-  StyleSheet,
-  Switch,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { Alert, Image, ScrollView, StyleSheet, View } from "react-native";
 import colors from "../../tokens/colors";
 import Questionnaire from "../../questionnaires/Questionnaire/Questionnaire";
 import myQuestionnaire from "../../questionnaires/Questionnaire/myQuestionnaire.json";
+import { Button, Switch, Text, TextInput } from "react-native-paper";
 
 const logoSource = require("../../../assets/doccla-logo.png");
 
@@ -78,12 +69,12 @@ const AllComponents = () => {
       <View style={styles.section}>
         <Text style={styles.label}>Button</Text>
         <Button
-          title="Press me!"
-          color={colors.primary}
           onPress={() => {
             Alert.alert("Simple Button pressed");
           }}
-        />
+        >
+          Press me!
+        </Button>
       </View>
       <View style={styles.section}>
         <Text style={styles.label}>Switch</Text>
@@ -116,6 +107,9 @@ const styles = StyleSheet.create({
     borderStyle: "dashed",
     marginBottom: 20,
   },
+  comparisonSection: {
+    flexDirection: "row",
+  },
   label: {
     color: colors.danger,
     marginBottom: 10,
@@ -124,14 +118,9 @@ const styles = StyleSheet.create({
     width: 300,
     height: 70,
   },
-  textInput: {
-    height: 40,
-    borderWidth: 1,
-    borderColor: "#ccc",
-    padding: 10,
-  },
+  textInput: {},
   textInputMultiline: {
-    textAlignVertical: "top", // Android
+    // textAlignVertical: "top", // Android
   },
   scrollView: {
     height: 100,
